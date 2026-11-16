@@ -99,6 +99,22 @@ function).
 - Controlling the simulator window by automation needs the user's permission. Ask first, and limit it to the
   simulator.
 
+### Simulator state and captures
+
+- **Stored settings override `properties.xml` defaults.** A capture that should show other settings (accent,
+  light background, other fields) must change the stored settings, or force the values in a **temporary copy**
+  of the project. Never put demo values into the shipped code.
+- Back up the simulator settings file before a test or capture run that touches it and restore it
+  byte-identically afterwards (compare a hash). Tests and captures write their own values into it, and the next
+  run would start from those.
+- A screenshot is only valid if the build it shows is the current one: rebuild, reload, then capture. Check the
+  image itself (time, values, the element that changed), not only the file date. This applies to screenshots
+  from a tester agent too.
+- Killing a load can leave the simulator on its launcher screen. Quit it completely and start it again.
+- Entering low power or always-on needs the simulator menu (and the user's permission to drive it). If that is
+  not possible, render the always-on drawing once in the temporary copy and say in the report that the real
+  `onEnterSleep` / display-mode path was **not** exercised.
+
 ## What tests and simulator cannot show
 
 Say these openly in `STATUS.md` and hand them to the user as a test list for the real watch:

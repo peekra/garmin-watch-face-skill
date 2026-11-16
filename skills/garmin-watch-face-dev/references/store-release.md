@@ -75,6 +75,26 @@ A stranger decides in seconds. Each screenshot answers one question:
 
 Same background and caption style on every image. Captions in English unless the user wants more languages.
 
+### Making the images
+
+- Compose the images with a small script kept in `design/drafts/store_tools/` (Swift with CoreGraphics works on
+  macOS with no extra install): HUD or plain background, a case drawn by the script (no photo, no logo), the
+  title in the face's own font where its licence allows (e.g. Saira, OFL), the captures from the simulator.
+- Captures come from a **temporary copy** with demo values (a round time like `10:08`, realistic numbers, the
+  weather you want to show). The real date in the simulator shows the real weekday and language; say so, or set
+  the date in the copy.
+- Callout lines (labels with a line to the element) must not cross digits or values; place the anchor points on
+  empty parts of the face and look at the result.
+- **File size.** The forum limit of about 150 KB per screenshot (not documented by Garmin) is hard to meet with
+  glow gradients, grids and many colours. What worked: indexed PNG with few colours (64 to 192), dithering off,
+  **no per-row PNG filters** for these flat images, a coarser background grid (64 px), weaker halos. Let the
+  script try colour counts from high to low until the file is small enough, and print the sizes. The icon may be
+  larger (300 KB forum figure) but stays simple: plain background, no text.
+- Look at every image after rendering. Typical faults: two watches touching, a glow that bands into patches
+  with few colours, a title wider than the picture.
+- A set that explains the face: overview with callouts, dark and light, accent colours, the main data element
+  (e.g. weather), the field choices.
+
 ## 6. Texts
 
 Use `templates/store/listing.md`, one file per store language:

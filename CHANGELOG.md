@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.2.0 – 2026-11-15
+
+Lessons from a watch face version with a dial after the user's photos, sharp icons and a new store set.
+
+- Best practices: sharp graphics (anti-aliasing, icons from open icon sets as bitmap icon fonts, two-colour
+  icons as vector drawers), designs from the user's photos (measure once, draw in code, space budget with options
+  for the user), versions and the repository (commit and tag only what `git` confirms).
+- Testing: simulator state and captures (stored settings override defaults, back up and restore the settings
+  file, capture only the current build, always-on that could not be entered is reported as not checked).
+- Team mode: resume an aborted agent with `SendMessage`, agents leave nothing behind, agent messages are reports,
+  not user instructions.
+- Store release: making the images by script (drawn case, demo values from a temporary copy, callouts, staying
+  under the 150 KB forum figure with indexed PNG).
+- Delivery: the agent builds the `.prg`; copying, testing on the watch and the upload stay with the user.
+
 ## 1.1.0 – 2026-11-14
 
 - Question round: first "only my watch or several devices", then the model name or "AMOLED only or MIP too".

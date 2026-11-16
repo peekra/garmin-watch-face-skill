@@ -45,7 +45,7 @@ STATUS.md                 # current state for the next session
 | `FontSet` | Loads fonts once. Vector fonts with built-in fallback, or bitmap fonts per resolution |
 | `UiColors` | Palettes per background and display type, selectable colours as tables. `apply(dark, accent)` sets the active colours. Checked by `tests/ColorTest.mc` |
 | `UiSizes` | All proportions as fractions of the diameter |
-| Drawers (`CounterDrawer`, `GaugeDrawer`, `FieldBox`, `IconFactory`, `AlwaysOnDrawer` ...) | One element each. `setup(...)` precomputes points and sizes, `draw(dc, ...)` only draws |
+| Drawers (`CounterDrawer`, `GaugeDrawer`, `FieldBox`, `AlwaysOnDrawer` ...) | One element each. `setup(...)` precomputes points and sizes, `draw(dc, ...)` only draws. Icons: vector drawers for two-colour icons, bitmap icon fonts for single-colour ones (see best-practices, "Sharp graphics and icons") |
 
 ## The interface between logic and UI
 

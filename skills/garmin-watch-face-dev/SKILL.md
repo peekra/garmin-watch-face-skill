@@ -103,6 +103,9 @@ accepts. **A store release is more than the `.iq`:** follow [references/store-re
 for icon, screenshots without the Garmin device picture (`scripts/screenshot.sh`), texts per store language and the
 upload guide for the user. Then update `STATUS.md`, commit with a message that lists the changes, and tag the
 version if the user wants commits.
+The `.prg` for the user's watch is built with `scripts/install-watch.sh`; the copy to the watch, the test on it and the
+store upload are the user's. If the permission check blocks the build script, say so and give the command instead
+of working around it.
 
 ## Scripts
 
