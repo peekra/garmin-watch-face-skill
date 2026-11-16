@@ -62,7 +62,7 @@ On Windows, copy the folder instead of linking it (a symbolic link needs develop
 `cmd`:
 
 ```bat
-mklink /J "peekra\.claude\skills\garmin-watch-face-dev" "C:\path\to\garmin-watch-face-skill\skills\garmin-watch-face-dev"
+mklink /J "%USERPROFILE%\.claude\skills\garmin-watch-face-dev" "C:\path\to\garmin-watch-face-skill\skills\garmin-watch-face-dev"
 ```
 
 **For one project only**, copy `skills/garmin-watch-face-dev` into that project's `.claude/skills/`.

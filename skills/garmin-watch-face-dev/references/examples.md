@@ -36,6 +36,6 @@ interface in `CLAUDE.md`, then a store agent and a package agent. See team-mode.
 
 ## Sibling examples
 
-- `~/Claude/Watch Faces/Simple Skill/` ("Cyber Future"): fixed layout with a dial, three fields, one accent colour.
-- `~/Claude/Garmin display /NeonFlow/`: earlier face with layout solver and system vector fonts; source of the data
+- `~/Claude/Watch Faces/Simple Skill/` ("Cyber Future", not published): fixed layout with a dial, three fields, one accent colour.
+- `~/Claude/Garmin display /NeonFlow/` (not published): earlier face with layout solver and system vector fonts; source of the data
   layer (`DataProvider`, `ComplicationSource`, `WeeklyActivities`) that Neon Frosh reuses.
