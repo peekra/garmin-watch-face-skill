@@ -1,9 +1,13 @@
 # Garmin watch face skill for Claude Code
 
+![Neon Frosh: reference image and the result built with this skill](docs/neon-frosh.png)
+
+*Neon Frosh, the worked example: reference image on the left, the finished watch face on the right (light and dark).*
+
 A [Claude Code](https://claude.com/claude-code) skill that builds Garmin Connect IQ watch faces in Monkey C, from
 the first idea to an installable `.prg` and a store-ready `.iq`.
 
-It comes from watch faces that were built with Claude Code; the worked example is Neon Frosh. It holds
+It comes from watch faces that were built with Claude Code; the worked example is [Neon Frosh](https://github.com/peekra/neon-frosh). It holds
 what these projects learned the hard way: energy and always-on rules, AMOLED and MIP palettes, testing on
 representative devices instead of all of them, build scripts that work around SDK quirks, and an interview that
 makes Claude ask instead of guess.

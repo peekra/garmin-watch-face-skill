@@ -4,7 +4,7 @@ A finished face built with this skill (version 1.3.0 of the skill, SDK 9.3.0, 20
 want to see how a rule looks in code. It is the user's own project on their Mac, so the paths below are not part
 of this repository; if they do not exist, work from the rules in the other reference files.
 
-Project: `~/Claude/Watch Faces/Neon Frosh/` (spec in `CLAUDE.md`, state and "not checked" list in `STATUS.md`).
+Project: [github.com/peekra/neon-frosh](https://github.com/peekra/neon-frosh) (spec in `CLAUDE.md`, state and "not checked" list in `STATUS.md`).
 
 ## What it shows
 

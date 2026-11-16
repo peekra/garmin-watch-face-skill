@@ -4,6 +4,8 @@
 
 - New `references/examples.md`: the face Neon Frosh as a worked example, with a table from topic to file in that
   project and to the matching rule; linked from the reference table in `SKILL.md`.
+- README shows the reference image next to the result (`docs/neon-frosh.png`); `examples.md` links the public
+  Neon Frosh repository.
 
 ## 1.3.0 – 2026-11-15
 
