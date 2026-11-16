@@ -30,7 +30,7 @@ generated jungle lines by hand: every device line names every pair.
 
 ## Checked list (SDK 9.3.0, November 2026)
 
-Round watches, Connect IQ 5.2.0 or newer, used by two shipped faces: 40 AMOLED and 19 MIP,
+Round watches, Connect IQ 5.2.0 or newer, used by the example face Neon Frosh: 40 AMOLED and 19 MIP,
 59 devices. Use it when profiles are missing, or to compare with the script's output.
 
 **AMOLED (40)**
@@ -49,8 +49,8 @@ Round watches, Connect IQ 5.2.0 or newer, used by two shipped faces: 40 AMOLED a
 
 Resolutions: AMOLED 360, 390, 416, 454, 466 px; MIP 218, 240, 260, 280 px.
 
-Left out on purpose: `instinctcrossoveramoled`. The script lists it (round, AMOLED), but the shipped faces
-did not support it. The Instinct Crossover line has physical hands over the display (not verified for this
+Left out on purpose: `instinctcrossoveramoled`. The script lists it (round, AMOLED), but Neon Frosh
+does not support it. The Instinct Crossover line has physical hands over the display (not verified for this
 model), so ask the user before adding it.
 
 ## What the list does not tell

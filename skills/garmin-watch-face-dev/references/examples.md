@@ -33,9 +33,3 @@ white always-on view, store package `.iq` with images and texts in EN and DE.
 
 Setup agent (cheap model), UI designer (strongest model), developer and tester (mid model) in parallel against the
 interface in `CLAUDE.md`, then a store agent and a package agent. See team-mode.md, "Model per role".
-
-## Sibling examples
-
-- `~/Claude/Watch Faces/Simple Skill/` ("Cyber Future", not published): fixed layout with a dial, three fields, one accent colour.
-- `~/Claude/Garmin display /NeonFlow/` (not published): earlier face with layout solver and system vector fonts; source of the data
-  layer (`DataProvider`, `ComplicationSource`, `WeeklyActivities`) that Neon Frosh reuses.

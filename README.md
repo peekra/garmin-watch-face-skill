@@ -3,8 +3,8 @@
 A [Claude Code](https://claude.com/claude-code) skill that builds Garmin Connect IQ watch faces in Monkey C, from
 the first idea to an installable `.prg` and a store-ready `.iq`.
 
-It comes from two watch faces that were built with Claude Code and published in the Connect IQ Store. It holds
-what those projects learned the hard way: energy and always-on rules, AMOLED and MIP palettes, testing on
+It comes from watch faces that were built with Claude Code; the worked example is Neon Frosh. It holds
+what these projects learned the hard way: energy and always-on rules, AMOLED and MIP palettes, testing on
 representative devices instead of all of them, build scripts that work around SDK quirks, and an interview that
 makes Claude ask instead of guess.
 

@@ -8,8 +8,8 @@ device is tested twice for the same reason.
 Devices with the same **resolution** and the same **font kind** behave the same. Group the manifest's devices
 by these two properties (from each device profile's `compiler.json` and `simulator.json`) and pick one
 representative per group. `scripts/devices.sh groups` prints the groups by display type and resolution for
-the project's manifest; split a group further when its devices have different font kinds. In a shipped face 16 representatives stood for 59 devices. Font kinds seen
-there: condensed vector fonts, wider "Regular" vector fonts, devices without a regular face, built-in fonts
+the project's manifest; split a group further when its devices have different font kinds. In Neon Frosh (bitmap fonts) 9 representatives stand for 59 devices; with system vector
+fonts it took 16. Font kinds seen with system fonts: condensed vector fonts, wider "Regular" vector fonts, devices without a regular face, built-in fonts
 only. Write the table of representatives into `CLAUDE.md`.
 
 | Check | Where | When |

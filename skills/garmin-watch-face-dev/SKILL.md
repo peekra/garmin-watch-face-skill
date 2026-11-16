@@ -5,9 +5,9 @@ description: Develop Garmin Connect IQ watch faces in Monkey C from the first id
 
 # Garmin watch face development
 
-This skill captures what worked in two watch faces shipped to the Connect IQ Store: one with a layout solver,
-system vector fonts, phone settings and 59 devices (AMOLED and MIP), and one with a fixed layout and bitmap fonts
-with glow. `templates/project/` is a small, buildable starting point that follows the structure described here.
+This skill captures what worked in watch faces built with Claude Code. The worked example is **Neon Frosh**
+(59 devices, AMOLED and MIP, bitmap fonts, phone settings), see [references/examples.md](references/examples.md).
+`templates/project/` is a small, buildable starting point that follows the structure described here.
 
 Everything here was observed with **Connect IQ SDK 9.3.0 on macOS**. Where a statement depends on that version it
 says so. On another SDK version, check the SDK documentation (`<sdk>/doc/`) before relying on it.

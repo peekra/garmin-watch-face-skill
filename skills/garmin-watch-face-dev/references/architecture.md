@@ -96,7 +96,7 @@ Flow in the view:
 |---|---|---|
 | Idea | Rows and fields are distributed by code. Hidden fields give their space to the others | Every element has a fixed position as a fraction of the diameter (`x()`, `y()`, `px()`) |
 | Use when | Elements can be hidden or exchanged and the space must be redistributed | The design is fixed, or hidden elements may leave a gap |
-| Cost | Large (over 1000 lines in a shipped face), needs many layout tests and watchdog care | Small, a few helper functions |
+| Cost | Large (over 1000 lines in a real face), needs many layout tests and watchdog care | Small, a few helper functions |
 
 Choose the fixed variant unless the user wants redistribution. Both use only fractions of `dc.getWidth()`,
 never fixed pixel values, so new resolutions scale without new resources.
