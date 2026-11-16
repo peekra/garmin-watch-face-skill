@@ -1,0 +1,11 @@
+project.manifest = manifest.xml
+
+# Unit tests live in tests/. Everything there carries the (:test) annotation,
+# so it is only compiled into builds made with -t.
+base.sourcePath = source;tests
+
+# Display type, selected at compile time: exactly one annotation of the pair stays in a build.
+#   (:amoled) / (:mip)   DisplayType.IS_MIP, UiColors palettes
+# A device line replaces the base value, so it names every pair again.
+base.excludeAnnotations = mip
+fenix7.excludeAnnotations = amoled

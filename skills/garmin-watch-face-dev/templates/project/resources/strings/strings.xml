@@ -1,0 +1,13 @@
+<strings>
+    <!-- Replace with the app name from the question round. -->
+    <string id="AppName" translatable="false">MyWatchFace</string>
+
+    <!-- Used by the on-device menu and the phone settings. A string that only the phone settings use
+         gets scope="settings", which keeps it out of the watch's memory. -->
+    <string id="BlackBackgroundTitle">Dark background</string>
+    <string id="ShowSecondsTitle">Show seconds</string>
+    <string id="AccentTitle">Accent colour</string>
+    <string id="AccentRed">Red</string>
+    <string id="AccentBlue">Blue</string>
+    <string id="AccentGreen">Green</string>
+</strings>

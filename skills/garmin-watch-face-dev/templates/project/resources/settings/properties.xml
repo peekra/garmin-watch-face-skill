@@ -1,0 +1,7 @@
+<properties>
+    <!-- Ids must match SettingsStore. Stored values are permanent: never renumber or rename them. -->
+    <property id="BlackBackground" type="boolean">false</property>
+    <!-- UiColors.ACCENT_*: 0 red, 1 blue, 2 green -->
+    <property id="Accent" type="number">0</property>
+    <property id="ShowSeconds" type="boolean">true</property>
+</properties>

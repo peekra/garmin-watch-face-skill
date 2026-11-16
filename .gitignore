@@ -1,0 +1,7 @@
+# Build output and signing keys never go into the repository
+bin/
+*.der
+*.pem
+*.prg
+*.iq
+.DS_Store

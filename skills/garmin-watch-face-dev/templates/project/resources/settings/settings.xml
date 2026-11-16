@@ -1,0 +1,17 @@
+<!-- Phone settings (Connect IQ app). They appear only for store and beta installs, not for a sideloaded .prg.
+     Same order as the on-device menu (source/settings/SettingsMenu.mc). -->
+<settings>
+    <setting propertyKey="@Properties.BlackBackground" title="@Strings.BlackBackgroundTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.Accent" title="@Strings.AccentTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.AccentRed</listEntry>
+            <listEntry value="1">@Strings.AccentBlue</listEntry>
+            <listEntry value="2">@Strings.AccentGreen</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSecondsTitle">
+        <settingConfig type="boolean" />
+    </setting>
+</settings>

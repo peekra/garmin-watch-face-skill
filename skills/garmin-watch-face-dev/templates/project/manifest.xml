@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- Replace before the first build:
+     - id: a new UUID from `uuidgen` (lower case). It identifies the app in the store, never change it later.
+     - products: the watches from the question round (device ids from the SDK Manager).
+     Permissions: add only what an API needs according to the SDK documentation. -->
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+    <iq:application id="00000000-0000-4000-8000-000000000000" type="watchface" name="@Strings.AppName" entry="FaceApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="5.2.0">
+
+        <iq:products>
+            <!-- AMOLED -->
+            <iq:product id="fr165"/>
+            <!-- MIP (64 colours) -->
+            <iq:product id="fenix7"/>
+        </iq:products>
+
+        <iq:permissions/>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+
+        <iq:barrels/>
+
+    </iq:application>
+</iq:manifest>
