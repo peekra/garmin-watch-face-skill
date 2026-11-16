@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.3.0 – 2026-11-15
+
+Lessons from the face "Neon Frosh" (outline time, two colour roles, 6 pressable fields, 59 devices, store set).
+
+- Best practices: hit-test in drawing order (a field drawn over a panel is tested first), mapping data kind to
+  watch view with the kinds that have none, always-on always white when the user decides so, outline digits as
+  bitmap fonts per resolution, status icons drawn as vectors from a user SVG, weather icon size and drawing,
+  two colour roles with a pair test.
+- Testing: forced states in a temporary copy (battery steps, Bluetooth, all weather kinds), touch parts as
+  unit tests, touch-and-hold views listed as not checked without the watch.
+- Team mode: model per role (cheap model for setup/builds/packages, mid model for developer/tester/store,
+  strongest model for a new UI layout), parallel designer and developer, resume with `SendMessage`.
+- Store release: keep raw captures and the composing script, recapture once after the last visible change,
+  callouts and limits for hardware-dependent features.
+
 ## 1.2.0 – 2026-11-15
 
 Lessons from a watch face version with a dial after the user's photos, sharp icons and a new store set.

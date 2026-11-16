@@ -57,6 +57,21 @@ work that has to be undone.
 - Agents never run git. The lead commits only on the user's word (see best-practices, "Versions and the
   repository").
 
+## Model per role (worked in 2026-11-15)
+
+Match the model to the difficulty; the lead stays on the user's model.
+
+| Work | Model |
+|---|---|
+| Setup from a template or a sibling project, manifest and jungle lines, build of all devices, `package.sh`, app id check, collecting logs | cheap model (Haiku) |
+| Developer (data, settings, menu, touch), tester (unit tests, simulator, screenshots), store images and texts | mid model (Sonnet) |
+| UI designer for a new layout: new fonts, geometry for 9 resolutions, palette with contrast values | strongest model (Opus) |
+
+Run the designer and the developer in parallel against the interface in `CLAUDE.md`; the developer's build errors
+inside `source/ui/` while the designer rewrites it are expected. When the lead finds a bug in a report, the owner
+of the file fixes it, or the lead for a one-line fix, and the tester re-runs. Resume the same agent with
+`SendMessage` for follow-up changes of its own files instead of starting a new one.
+
 ## Keeping it cheap
 
 - Spawn only the roles the task needs. A UI-only change needs no developer agent.

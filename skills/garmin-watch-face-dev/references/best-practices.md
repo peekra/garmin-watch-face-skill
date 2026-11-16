@@ -25,7 +25,9 @@ Each rule comes with its reason. If a situation is not covered, apply the reason
   switched off.
 - Limits in always-on: at most 10 % lit pixels and no pixel lit for more than 3 minutes, otherwise the system
   blanks the screen. Draw thin, dim content and shift its position every minute.
-- The always-on view ignores the light/dark setting: always light on black.
+- The always-on view ignores the light/dark setting: always light on black. If the user wants it white
+  whatever accent colours are chosen (observed 2026-11-15), use one `ALWAYS_ON_INK` for every element; dimmed
+  accent colours are only the default when the user did not decide.
 
 ## MIP displays
 
@@ -79,7 +81,12 @@ MIP. Readability is therefore tested, not judged by eye.
   calories view): say so to the user. Give every field a hit box between its layout limits with a height that
   cannot reach the neighbouring row, make a field that is off no target, and ignore presses in the always-on
   view. Keep "which kinds open a view" a pure function and unit test it together with "which field lies under
-  this point". Whether each view really opens can only be seen on the watch: list it under "not checked".
+  this point". **Hit-test in drawing order, topmost first:** when a field is drawn over a panel (panel polygons
+  often reach under round fields), test the field before the panel, or a press on the inner side of the field
+  opens the panel's view (found by the tester on 2026-11-15). Test 12 points on the rim of every field.
+  Mapping used so far (SDK 9.3.0, check the constants): weather, body battery, heart rate, steps, calories
+  (active and total share the calories view), VO2 max run, weekly run and bike distance, date -> calendar events.
+  Weekly swim, climbing and training have no view: say so to the user and in the store text. Whether each view really opens can only be seen on the watch: list it under "not checked".
 - Touch and hold needs a touchscreen. Say this in the store description when the feature is advertised.
 
 ## Memory and time budget
@@ -121,6 +128,25 @@ For a user who wants "everything sharp" (SDK 9.3.0):
   licence next to it, so a size change is one command and a re-build.
 - After such a change check memory on the most limited device (bitmap fonts cost memory per resolution) and
   report the number.
+
+### Outline digits, SVG status icons, weather icons
+
+- **Solid hours, outlined minutes:** system vector fonts cannot do it, and some devices have none. Generate
+  bitmap fonts per resolution from one source font: the same digit once solid and once as an inner contour
+  clipped to the glyph (so the outer edge equals the solid digit). Stroke 2 px at 218-280, 3 px at 360-390,
+  4 px from 416. The always-on view can use the outline font for all digits. Colon as two outlined rectangles
+  drawn in code.
+- **Status icons from an SVG the user supplies** (battery, Bluetooth): copy the SVG to `design/` as geometry
+  reference and draw it as vectors scaled by one unit from `UiSizes` (line segments with the pen width, rect, bars),
+  not as a bitmap. Battery: bars by charge, warning colour at 15 % or less, outline only when the value is
+  missing. Bluetooth: accent colour when connected, a grey for "not connected".
+- **Weather icons** are as large as the other field icons (heart, bolt, flame), also in panels. Cloud as an ink
+  outline filled with the colour behind it (background or panel fill), detail parts (sun, rain, snow, lightning)
+  in one accent colour. Check the smallest display: at 218 px the icon is about 13 px and rain and showers are
+  hard to tell apart; say so.
+- **Two colour roles:** when the user wants "colour 1 / colour 2" from a list of 8, keep one table per
+  background and display type (dark, light, AMOLED, MIP), a dimmed panel fill per colour, and let the colour test
+  check every pair (8 x 8 x light/dark), ink on panel fill at least 4.5:1, colour on background at least 3:1.
 
 ## Designs from the user's photos or mock-ups
 

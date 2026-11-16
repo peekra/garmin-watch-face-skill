@@ -115,6 +115,15 @@ function).
   not possible, render the always-on drawing once in the temporary copy and say in the report that the real
   `onEnterSleep` / display-mode path was **not** exercised.
 
+### Forced states in a temporary copy
+
+Values the simulator does not give (battery steps, Bluetooth off, every weather kind, missing data) are forced
+in a **temporary copy** of the project in the scratchpad, never in the shipped code. Typical matrix, one capture
+each on the primary device (dark and light) and on the smallest display: battery 100 / 60 / 30 / 10 % / null,
+Bluetooth on / off, all weather kinds in a round field and in a panel, always-on drawing. Name the files by
+what they show (`fr165_dark_w3rain_bat10.png`), look at each one, compare with the mock-up, delete the copy.
+Add unit tests for pure parts of touch input (see best-practices) and run them on one AMOLED and one MIP device.
+
 ## What tests and simulator cannot show
 
 Say these openly in `STATUS.md` and hand them to the user as a test list for the real watch:
@@ -125,6 +134,8 @@ Say these openly in `STATUS.md` and hand them to the user as a test list for the
 - Sensor and history data: observed with SDK 9.3.0, the simulator has no activity history.
 - Timer smoothness, battery use, readability in sunlight, the real always-on behaviour.
 - Phone settings: only with a beta or store installation.
+- Touch and hold opening a system view (`Complications.exitTo`): needs the watch, or the user's permission to drive
+  the simulator window. List it as not checked otherwise.
 
 ## Phone settings
 

@@ -95,6 +95,14 @@ Same background and caption style on every image. Captions in English unless the
 - A set that explains the face: overview with callouts, dark and light, accent colours, the main data element
   (e.g. weather), the field choices.
 
+### After the images exist
+
+- Keep the raw simulator captures in `design/drafts/captures/` and the composing script in `design/drafts/store_tools/`:
+  every visible change (icons, colours, always-on) means recapture from a fresh temporary copy and regenerate all
+  images, then rebuild the packages. Do this once at the end of the changes, not after each one.
+- Features that depend on the hardware (touch and hold on fields, always-on) get a short callout in one image and a
+  line in the texts, with the limit ("watches with a touchscreen").
+
 ## 6. Texts
 
 Use `templates/store/listing.md`, one file per store language:
