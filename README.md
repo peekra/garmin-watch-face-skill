@@ -55,7 +55,7 @@ Clone the repository, then make the skill available to Claude Code.
 ```bash
 git clone https://github.com/peekra/garmin-watch-face-skill.git
 mkdir -p ~/.claude/skills
-ln -s "$PWD/garmin-watch-face-skill/skills/garmin-watch-face-dev" ~/.claude/skills/garmin-watch-face-dev
+ln -s "$PWD/garmin-watch-face-skill/skills/garmin-watch-face-dev" "$HOME/.claude/skills/garmin-watch-face-dev"
 ```
 
 On Windows, copy the folder instead of linking it (a symbolic link needs developer mode), or create a junction in
