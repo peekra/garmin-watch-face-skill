@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.1 – 2026-11-16
+
+- New `references/examples.md`: the face Neon Frosh as a worked example, with a table from topic to file in that
+  project and to the matching rule; linked from the reference table in `SKILL.md`.
+
 ## 1.3.0 – 2026-11-15
 
 Lessons from the face "Neon Frosh" (outline time, two colour roles, 6 pressable fields, 59 devices, store set).

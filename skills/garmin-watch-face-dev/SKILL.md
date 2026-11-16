@@ -136,5 +136,6 @@ report what fails.
 | [references/testing.md](references/testing.md) | Writing tests, choosing devices, using the simulator |
 | [references/build-release.md](references/build-release.md) | Building `.prg`/`.iq`, developer key |
 | [references/store-release.md](references/store-release.md) | A Connect IQ Store release: packages, icon, screenshots, texts, upload guide |
+| [references/examples.md](references/examples.md) | Wanting to see a rule in finished code: the face Neon Frosh and where each topic lives |
 | `templates/project/` | Starting a project: buildable skeleton, `CLAUDE.md`/`STATUS.md` skeletons |
 | `templates/store/` | Store release: `listing.md` (texts per language), `UPLOAD-GUIDE.md` (steps for the user) |
