@@ -52,6 +52,17 @@ the screenshot by hand. Reports from Windows and Linux are welcome: open an issu
 
 ## Installation
 
+### With the skills CLI (recommended)
+
+```bash
+npx skills add peekra/garmin-watch-face-skill -g -a claude-code
+```
+
+`-g` installs it for all projects, `-a claude-code` only for Claude Code.
+Update later with `npx skills update`.
+
+### Manual
+
 Clone the repository, then make the skill available to Claude Code.
 
 **For all your projects** (recommended), link or copy the skill folder into `~/.claude/skills/`:

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 – 2026-11-19
+
+- README: install with `npx skills add peekra/garmin-watch-face-skill -g -a claude-code`; manual install kept.
+
 ## 1.3.1 – 2026-11-16
 
 - New `references/examples.md`: the face Neon Frosh as a worked example, with a table from topic to file in that
